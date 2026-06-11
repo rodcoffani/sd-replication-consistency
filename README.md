@@ -78,3 +78,8 @@ Demonstra que o node2 ficou desatualizado (limitacão do modelo push-only).
 ### Teste 3: **Consistência fraca vs forte**
 
 Derruba o node2 antes de qualquer incremento, faz 15 incrementos no node1, espera a janela de replicação, religa o node2 e compara os modos fraco (`/value`) e forte (`/value?consistency=strong`).
+
+## Resultados
+
+![Resultados do primeiro teste](./test1.png)
+![Resultados do segundo e terceiro teste](./test2and3.png)
