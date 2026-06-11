@@ -1,0 +1,24 @@
+services:
+  node1:
+    build: .
+    hostname: node1
+    environment:
+      - PEERS=http://node2:5000,http://node3:5000
+    ports:
+      - "5001:5000"
+
+  node2:
+    build: .
+    hostname: node2
+    environment:
+      - PEERS=http://node1:5000,http://node3:5000
+    ports:
+      - "5002:5000"
+
+  node3:
+    build: .
+    hostname: node3
+    environment:
+      - PEERS=http://node1:5000,http://node2:5000
+    ports:
+      - "5003:5000"
